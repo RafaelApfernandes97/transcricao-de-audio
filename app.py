@@ -8,6 +8,8 @@ import traceback
 
 app = Flask(__name__)
 
+os.environ["PATH"] += os.pathsep + "/usr/bin/"
+
 # Modelo da transcrição do Whisper - ajuste o modelo conforme sua capacidade de hardware
 modelo = whisper.load_model("large-v2")
 
